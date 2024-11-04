@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve("src", "components/index.ts"),
-      name: "@wompi-3ds-components",
-      fileName: (format) => `@wompi-3ds-components.${format}.js`,
+      name: "wompi-3ds-components",
+      fileName: (format) => `wompi-3ds-components.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
