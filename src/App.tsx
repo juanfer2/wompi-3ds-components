@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { Greeting } from "../lib/components";
 import "./App.css";
 import reactLogo from "./assets/react.svg";
-import { Greeting } from "./components";
 import viteLogo from "/vite.svg";
 
 function App() {
