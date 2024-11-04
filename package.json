@@ -1,6 +1,6 @@
 {
   "name": "@cmaj7/wompi-3ds-components",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Library for implement 3DS with Wompi",
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
     "node": ">=12.0"
   },
   "scripts": {
+    "build": "npm run rollup",
     "rollup": "rollup -c",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
