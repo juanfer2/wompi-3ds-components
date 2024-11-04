@@ -11,7 +11,7 @@ export default defineConfig({
   plugins: [react(), libInjectCss(), dts({ include: ["lib"] })],
   resolve: {
     alias: {
-      "@": "/src",
+      "@": "./",
     },
   },
   build: {
