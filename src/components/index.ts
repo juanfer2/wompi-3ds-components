@@ -1,3 +1,2 @@
-export * from "./Button/Button.stories";
-export * from "./Button/Button";
-export * from "./Greeting/index";
+export { default as Button } from "./Button";
+export { default as Greeting } from "./Greeting";
