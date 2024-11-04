@@ -1,6 +1,6 @@
 {
   "name": "@cmaj7/wompi-3ds-components",
-  "version": "1.8.1",
+  "version": "1.9.0",
   "description": "Library for implement 3DS with Wompi",
   "repository": {
     "type": "git",
