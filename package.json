@@ -1,11 +1,11 @@
 {
-  "name": "wompi-3ds-components-react",
+  "name": "@cmaj7/wompi-3ds-components",
   "private": false,
   "version": "1.2.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juanfer2/-wompi-3ds-components.git"
+    "url": "git+https://github.com/juanfer2/wompi-3ds-components.git"
   },
   "license": "MIT",
   "author": {
@@ -23,9 +23,9 @@
     "wompi"
   ],
   "bugs": {
-    "url": "https://github.com/juanfer2/-wompi-3ds-components/issues"
+    "url": "https://github.com/juanfer2/wompi-3ds-components/issues"
   },
-  "homepage": "https://github.com/juanfer2/-wompi-3ds-components#readme",
+  "homepage": "https://github.com/juanfer2/wompi-3ds-components#readme",
   "config": {
     "commitizen": {
       "path": "./node_modules/@ryansonshine/cz-conventional-changelog"
