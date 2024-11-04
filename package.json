@@ -1,8 +1,13 @@
 {
   "name": "@cmaj7/wompi-3ds-components",
   "private": false,
-  "version": "1.4.0",
+  "version": "1.5.0",
   "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/juanfer2/wompi-3ds-components.git"
@@ -84,9 +89,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "test": "vitest run",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
