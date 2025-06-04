@@ -6,6 +6,19 @@ This project is part of a [blog & video tutorial](https://dev.to/alexeagleson/ho
 
 You can use this repo to fork as a template for your own React library projects.  
 
+## Environment Configuration
+
+To use features that require API keys, such as the Wompi3DS component, you need to configure your environment variables.
+
+1.  Copy the example environment file:
+    ```bash
+    cp .env.example .env
+    ```
+2.  Open the newly created `.env` file.
+3.  Replace `your_wompi_public_key_here` with your actual Wompi public key for the `REACT_APP_WOMPI_PUBLIC_KEY` variable.
+
+The `.env` file is included in `.gitignore` and should **not** be committed to your repository. This keeps your API keys private.
+
 ## Available Scripts
 
 ### Build the library
@@ -37,6 +50,39 @@ npm run storybook
 ```
 npm run build-storybook
 ```
+
+## Running the Local Test Example
+
+This project includes a simple local test setup in the `/examples` directory to demonstrate and manually test the `Wompi3DS` component (and potentially others) in a plain HTML page.
+
+To run this example:
+
+1.  **Ensure Dependencies are Met**: The example `examples/app.tsx` imports directly from `../src`. You'll need a tool that can resolve these imports and transpile TypeScript/JSX.
+
+2.  **Set Wompi Public Key**:
+    Open `examples/app.tsx` and replace the placeholder `"pub_test_YOUR_WOMPI_PUBLIC_KEY"` with your actual Wompi **test** public key.
+    ```typescript
+    publicKey="pub_test_YOUR_ACTUAL_WOMPI_TEST_PUBLIC_KEY"
+    ```
+
+3.  **Serve and Bundle with Parcel (Recommended)**:
+    The easiest way to run the example is using [Parcel](https://parceljs.org/), which handles TypeScript, JSX, and module bundling out-of-the-box with minimal configuration.
+    If you don't have Parcel installed globally, you can use `npx`:
+    ```bash
+    npx parcel examples/index.html
+    ```
+    This command will start a development server (usually on `http://localhost:1234`) and automatically open the page in your browser. Any changes to `examples/app.tsx` or the component source in `src/` should trigger a rebuild and live reload.
+
+4.  **Alternative (Using Library Build Output - More Complex for this example)**:
+    If your library's main build (`npm run rollup`) produces a UMD or IIFE bundle (e.g., `dist/umd/your-library.js`), you could:
+    *   Uncomment or add a `<script>` tag in `examples/index.html` to include this bundle.
+    *   Modify `examples/app.tsx` to become plain JavaScript (`examples/app.js`) that uses the global variable exposed by the UMD bundle, or bundle `app.tsx` separately to consume the library bundle.
+    *   This approach is generally more involved for quick local testing compared to Parcel for a source-linked example.
+
+5.  **Check Console Logs**:
+    Open your browser's developer console. The `onSuccess` and `onError` handlers in `examples/app.tsx` will log detailed transaction or error objects there.
+
+This local example is primarily for development and manual testing of components directly from source. For more structured component showcases and testing, refer to Storybook (`npm run storybook`).
 
 ## Tutorial
 
